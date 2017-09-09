@@ -1,0 +1,147 @@
+/* Universal Styling */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 62.5%; /* Review slides for pixels to REMs for accesibilty browser can scale items compared to pixels (Root em) */
+    color: #202020; /* Use online color contrast checker for visually impared */
+}
+
+.flex-grid { /* flexbox container */
+    display: flex; /* use flex box to display items horizontally */
+    justify-content: center; /* From top left to center to page */
+    align-items: center; /* at same height horizontally */
+    flex-wrap: nowrap; /* keep items on same axis do not wrap to bottom */
+}
+
+.col {   /* flexbox items; mobile friendly boxes */
+    padding: 5em 2em 5em 2em; /* top right bottom left */
+    font-size: 1.4rem;      /* 1.4rem = 14px */
+}
+
+.intro, 
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5em 2em;
+}
+
+.intro > h1 {
+    font-size: 2rem; /* 20 pixels */
+}
+
+.intro > h2 {
+    font-size: 2.5rem; /* 25 pixels */
+    line-height: 0;
+}
+
+/* Purpose Section */
+
+.purpose {
+    background-color: #BA9AFB;
+}
+
+.monitor-icon {
+    padding-left: 4em;
+}
+
+.smartphone-icon {
+    position: relative; /* allows item to be moved around */
+    right: 4rem; /* push icon from the right to overlap monitor */
+    top: 4rem; /* push icon from the top down */
+}
+
+/* About Me Section */
+
+.cardinal-logo,
+.gdi-logo {
+    height: 13rem;
+    position: relative;
+}
+
+.cardinal-logo {
+    bottom: 1.5rem;
+}
+
+.gdi-logo {
+    top: 3.5rem;
+}
+
+.cs-link {
+    color: #2984D0;
+    text-decoration: none;
+}
+
+.gdi-link {
+    color: #F05C61;
+    Text-decoration: none;
+}
+
+/* Call to Acton Section */
+
+.call-to-action {
+    background-color: #BA9AFB;
+    font-size: 1.4rem;
+}
+
+button {
+    border-style: none;
+    cursor: pointer;
+    padding: 1em;
+    text-transform: uppercase;
+    border-radius: 2px; /* button doent flex like fonts */
+    background-color: white;
+    font-weight: 500;
+}
+
+.action-texts {
+    text-align: center;
+}
+
+/* Social Media Section */
+
+.social-media {
+    font-weight: 600;
+}
+
+.social-media-list {
+    display: flex; /* display in a horitzontal row */
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-bottom: 3em;
+    list-style-type: none;
+}
+
+.social-media-list > li {
+    font-size: 1.1rem;
+    margin: .5rem;
+}
+
+.social-media-list > li > a {
+    text-decoration: none;
+    color: #AA7FFE;
+    text-transform: uppercase;
+}
+
+/* Breakpoints - Responsive Design - best practice, if less than 980 px will use these styles*/
+@media (max-width: 980px){
+    .flex-grid{
+        display: block; /* from horizontal to individual items are stacked blocks */
+    }
+
+    .col {
+        margin: auto; /* automatically center items when in block mode */
+        text-align: center;
+        padding: 2em;
+    }
+
+    .col-wrap {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap; /* keep icons together */
+        padding-bottom: 3em; /* extend color in flex box*/
+    }
+}
