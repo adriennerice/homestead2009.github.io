@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 62.5%; /* Review slides for pixels to REMs for accesibilty browser can scale items compared to pixels (Root em) */
-    color: #202020; /* Use online color contrast checker for visually impared */
+    color: orange;/*#202020; /* Use online color contrast checker for visually impared */
 }
 
 .flex-grid { /* flexbox container */
